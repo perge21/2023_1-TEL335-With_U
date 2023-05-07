@@ -1,0 +1,25 @@
+{
+  "name": "with_u",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/perge21/2023_1-TEL335-With_U.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perge21/2023_1-TEL335-With_U/issues"
+  },
+  "homepage": "https://github.com/perge21/2023_1-TEL335-With_U#readme",
+  "dependencies": {
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.0",
+    "koa-router": "^12.0.0",
+    "pg": "^8.10.0"
+  }
+}
