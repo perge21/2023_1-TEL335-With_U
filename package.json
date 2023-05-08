@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/perge21/2023_1-TEL335-With_U#readme",
   "dependencies": {
+    "@koa/router": "^12.0.0",
+    "express": "^4.18.2",
     "koa": "^2.14.2",
     "koa-bodyparser": "^4.4.0",
     "koa-router": "^12.0.0",
-    "pg": "^8.10.0"
+    "mongodb": "^5.4.0",
+    "mongoose": "^7.1.0"
   }
 }
