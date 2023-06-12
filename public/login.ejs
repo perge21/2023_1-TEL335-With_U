@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+
+    <% if (invalidUser) { %>
+        <p>Usuario inválido. Inténtalo de nuevo.</p>
+        <% } %>
+
+            <form action="/login" method="POST">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <a href="/home">Volver a home</a>
+
+</body>
+
+</html>

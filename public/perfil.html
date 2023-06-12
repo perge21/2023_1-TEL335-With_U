@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script type='text/javascript'> (function() { 
+    if( window.localStorage ) { 
+        if( !localStorage.getItem('firstLoad') ) { 
+            localStorage['firstLoad'] = true; window.location.reload(); 
+            } 
+            else localStorage.removeItem('firstLoad'); 
+            } 
+            }
+            )(); 
+</script>
+    <script type="text/javascript">
+    function confirmation(){if(confirm("¿Está seguro de realizar esta acción?"))
+	{return true;} else{return false;}}
+    </script>
+    <meta HTTP-EQUIV="REFRESH" content="">
+    <div class="pagina"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="perfi.css">
+</head>
+
+<body>    
+<form action="editarPerfil.php" method="GET" class="edit">
+        <br>
+	<H1>Perfil</H1>
+        <h3>Nombre de Usuario: <?php echo $resultado['Nombre_Usuario']; ?> </h3>
+        <h3>Edad: <?php echo $resultado['Edad']; ?> </h3>
+        <input type="hidden" name="ID_Cuenta" value="<?php echo $resultado['ID_Cuenta'] ?>">
+</form>
+    <form action="notificaciones.php" class="edit3" onsubmit="return confirmation()">
+        <br>
+        <button type="submit" class="text2">Notificaciones</button>
+    </form>
+    <form action="../indexPerfil.php" class="edit3" onsubmit="return confirmation()">
+        <br>
+        <button type="submit" class="text1"> Pagina principal</button>
+    </form>
+    <form method= "POST" action="perfil.php" onsubmit="return confirmation()">
+        <br>
+        <input type="hidden" name="ID_Cuenta" value="<?php echo $resultado['ID_Cuenta'] ?>">
+        <button type="submit"  value="Eliminar" class="eliminar" name="btn_eliminar">Eliminar cuenta</button>
+    </form>
+    <form action="cerrar.php" class="edit3" onsubmit="return confirmation()">
+        <br>
+        <button type="submit" class="text2">Cerrar Sesion</button>
+    </form>
+</body>
+
+<!--<meta http-equiv="refresh" content="5" />-->
+
+</html>
