@@ -1,0 +1,16 @@
+.pie {
+    display: flex;
+    justify-content: space-between;
+    /* Distribución horizontal */
+    background-color: #333;
+    color: #fff;
+    padding: 0px;
+    margin-top: auto;
+
+}
+
+.pie-column {
+    flex-basis: 33%;
+    margin-left: 3%;
+    /* Ancho igual para cada columna */
+}

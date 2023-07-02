@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="./styles/header.css">
+<div id="blurry-filter"></div>
+<header>
+    <div>
+        <div style="padding-right: 10px;">
+            <a href="/home" style="color: rgb(0, 0, 0); font-size: 30px; font-family: fantasy;">
+                <p>With Ü</p>
+            </a>
+        </div>
+        <div style=" padding-right: 10%; padding-left: 10%;">
+            <article id="title">
+                <span class="parent">¡Hola, <%= name %>!</span>
+                <br />
+                <span class="name">Tu interés es: "<%= notificacion %>"</span>
+        </div>
+
+        <div style="padding-left: 30%;">
+
+            <div class="dropdown">
+                <a href="/perfil">
+                    <img src="../photos/avatar.jpg" alt="mdo" width="80" height="80" class="rounded-circle">
+                </a>
+                <div class="dropdown-content">
+                    <a style="color: rgb(0, 0, 0);" href="/perfil">
+                        <p>Perfil de <%= name %>
+                        </p>
+                    </a>
+
+                    <a style="color: rgb(0, 0, 0);" href="/login">
+                        <p>Ingresar
+                        </p>
+                    </a>
+                    <a style="color: rgb(0, 0, 0);" href="/registro">
+                        <p>Registrar
+                        </p>
+                    </a>
+                    <a style="color: rgb(0, 0, 0);" href="/logout">
+                        <p>Anonimar
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</header>

@@ -1,0 +1,6 @@
+.imagen {
+    width: 250px;
+    /* Cambia el tamaño de la imagen ajustando el valor de width */
+    height: 250px;
+    /* La altura se ajustará automáticamente para mantener la proporción */
+}

@@ -5,27 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/burbuja.css">
+
 </head>
 
+<!DOCTYPE html>
+<html>
+
 <body>
-    <h1>¡Hola, <%= name %>!</h1>
-    <h3>tu interés es: "<%= notificacion %>"</h3>
-    </p>
 
-    <p>¿Qué te gustaría dedicar hoy?</p>
-    <ul>
-        <li><a href="">Calmar</a></li>
-        <li><a href="">Ansiedad</a></li>
-        <li><a href="">Reflexionar</a></li>
-        <li><a href="">Respiración</a></li>
-    </ul>
+    <%- include('./components/header.ejs') %>
 
-    <p>¿Qué te gustaría hacer?</p>
-    <ul>
-        <li><a href="registro.html">Registrar usuario</a></li>
-        <li><a href="/login">Ingresar en usuario</a></li>
-        <li><a href="/logout">Permanecer anónimo</a></li>
-    </ul>
+        <p></p>
+        <p></p>
+        <p style="font-weight: bold; font-size: 25px; font-family: sans-serif; text-align: center;">¿Qué sección te
+            gustaría revisar?</p>
+        <ul style="padding-bottom: 150px;">
+            <div class="container">
+                <div class="burbuja">
+                    <div class="titulo">Calmar</div>
+                    <div class="texto">Entra y relájate</div>
+                    <a class="enlace" href="https://www.ejemplo.com">Ir</a>
+                </div>
+
+                <div class="burbuja">
+                    <div class="titulo">Ansiedad</div>
+                    <div class="texto">Ten calma, respira. Te ayudaremos</div>
+                    <a class="enlace" href="https://www.ejemplo.com">Ir</a>
+                </div>
+                <div class="burbuja">
+                    <div class="titulo">Reflexión</div>
+                    <div class="texto">Escribe lo que estas pasando, te hará sentir mejor y reflexionar más
+                        profundamente</div>
+                    <a class="enlace" href="https://www.ejemplo.com">Ir</a>
+                </div>
+                <div class="burbuja">
+                    <div class="titulo">Respiración</div>
+                    <div class="texto">Técnicas de respiración para cuando lo necesites en momentos de nerviosismo</div>
+                    <a class="enlace" href="/respiracion">Ir</a>
+                </div>
+            </div>
+        </ul>
+
+
+        <!-- <div class="pie-container"> -->
+        <%- include('./components/footer.ejs') %>
 </body>
 
 </html>

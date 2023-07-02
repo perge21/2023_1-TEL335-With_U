@@ -58,6 +58,8 @@ router.get('/home', async (ctx) => {
   await ctx.render('home', { name: userName, notificacion: notificacion });
 });
 
+
+
 // Agrega un usuario
 router.post("/a_registro", async (ctx, next) => {
   // Extrae los datos del cuerpo de la solicitud
@@ -95,6 +97,27 @@ router.get('/login', async (ctx) => {
   await ctx.render('login', { invalidUser: false });
 });
 
+router.get('/perfil', async (ctx) => {
+  const userName = ctx.session.userName || 'anónimo';
+  const edad = ctx.session.edad || 18;
+  const notificacion = ctx.session.notificacion || 'indefinido';
+  await ctx.render('perfil', { name: userName, notificacion: notificacion, edad: edad, invalidUser: false });
+});
+
+router.get('/respiracion', async (ctx) => {
+  const userName = ctx.session.userName || 'anónimo';
+  const notificacion = ctx.session.notificacion || 'indefinido';
+
+  await ctx.render('respiracion', { name: userName, notificacion: notificacion });
+});
+
+router.get('/registro', async (ctx) => {
+  const userName = ctx.session.userName || 'anónimo';
+  const notificacion = ctx.session.notificacion || 'indefinido';
+
+  await ctx.render('registro', { name: userName, notificacion: notificacion });
+});
+
 router.post('/login', async (ctx) => {
   const { username } = ctx.request.body;
 
@@ -103,6 +126,7 @@ router.post('/login', async (ctx) => {
 
     if (user) {
       ctx.session.userName = username;
+      ctx.session.edad = user.edad;
       ctx.session.notificacion = user.notificacion;
       ctx.redirect('/home'); // Redireccionar al home después de iniciar sesión
     } else {

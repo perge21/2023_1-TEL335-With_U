@@ -1,0 +1,77 @@
+.container {
+    width: fit-content;
+    height: max-content;
+    /* background-color: #E6DFF2; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* Resto de estilos del contenedor */
+}
+
+
+.burbuja {
+    position: relative;
+    width: 170px;
+    height: 300px;
+    background: linear-gradient(to bottom, #d0cbf7, rgb(129, 79, 248));
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.burbuja .titulo {
+    text-align: center;
+    padding: 20px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 1;
+
+}
+
+/* .burbuja:hover .titulo {
+    color: #BBB;
+    transition: background-color 0.3s;
+    opacity: 0;
+} */
+
+.burbuja .texto {
+    text-align: center;
+    padding: 25px;
+    color: #b99dfc;
+    font-size: 15px;
+    transition: color 1.5s;
+    font-style: italic;
+    opacity: 0;
+}
+
+.burbuja:hover .texto {
+    color: #fff;
+    opacity: 1;
+}
+
+.burbuja .enlace {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #cacaca;
+    font-size: 18px;
+    text-decoration: none;
+
+    transition: background-color 0.3s;
+    opacity: 0;
+}
+
+.burbuja:hover .enlace {
+    opacity: 1;
+}
+
+.burbuja .enlace:hover {
+    background: linear-gradient(to bottom, #6537da, #462be2);
+}

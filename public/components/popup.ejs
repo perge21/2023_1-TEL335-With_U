@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="./styles/popup.css">
+</head>
+
+<body>
+    <div class="popup-overlay">
+        <div class="popup-bord">
+            <div class="popup-content">
+                <div>
+                    <h1>Popup Emergente</h1>
+                    <p class="popup-text">
+                        sexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexosexo
+
+                    </p>
+                    <button class="popup-close">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Obtener referencias a los elementos del DOM
+        const popupButton = document.querySelector('.popup-button');
+        const popupOverlay = document.querySelector('.popup-overlay');
+        const popupClose = document.querySelector('.popup-close');
+
+        // Función para abrir el popup
+        function openPopup() {
+            popupOverlay.style.display = 'flex';
+        }
+
+        // Función para cerrar el popup
+        function closePopup() {
+            popupOverlay.style.display = 'none';
+        }
+
+        // Agregar eventos a los elementos
+        popupButton.addEventListener('click', openPopup);
+        popupClose.addEventListener('click', closePopup);
+    </script>
+</body>
+
+</html>
